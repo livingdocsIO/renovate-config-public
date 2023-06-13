@@ -5,7 +5,6 @@
   ],
   "dependencyDashboard": true,
   "labels": ["dependencies"],
-  "baseBranches": ["main"],
   "rebaseWhen": "auto",
   "commitMessageExtra": "from {{{currentVersion}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
   "prConcurrentLimit": 6,

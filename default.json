@@ -5,7 +5,6 @@
   ],
   "dependencyDashboard": true,
   "labels": ["dependencies"],
-  "baseBranches": ["master"],
   "rebaseWhen": "auto",
   "commitMessageExtra": "from {{{currentVersion}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
   "prConcurrentLimit": 6,
@@ -22,13 +21,13 @@
       "groupName": "babel"
     },
     {
-      "matchBaseBranches": ["master"],
+      "matchBaseBranches": ["main", "master"],
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
       "automergeType": "pr"
     },
     {
-      "matchBaseBranches": ["master"],
+      "matchBaseBranches": ["main", "master"],
       "matchDepTypes": ["devDependencies"],
       "automerge": true,
       "automergeType": "pr"
