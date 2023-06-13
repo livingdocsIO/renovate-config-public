@@ -21,6 +21,10 @@
       "groupName": "babel"
     },
     {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
+    },
+    {
       "matchBaseBranches": ["main"],
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "automerge": true,
