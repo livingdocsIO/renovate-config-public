@@ -40,7 +40,6 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "enabled": true,
-    "reviewers": ["@JordiVM", "@marcbachmann"],
     "schedule": ["after 6pm and before 8am every day"],
     "stabilityDays": 0,
     "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
