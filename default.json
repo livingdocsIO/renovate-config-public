@@ -15,6 +15,7 @@
   "prHourlyLimit": 6,
   "separateMinorPatch": true,
   "platformAutomerge": true,
+  "minimumReleaseAge": 3,
   "packageRules": [
     {
       "matchPackagePatterns": ["babel"],
@@ -41,7 +42,7 @@
     "labels": ["security"],
     "enabled": true,
     "schedule": ["after 6pm and before 8am every day"],
-    "stabilityDays": 0,
+    "minimumReleaseAge": 0,
     "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
     "prCreation": "immediate"
   }
