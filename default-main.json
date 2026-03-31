@@ -13,6 +13,7 @@
   "enabledManagers": ["npm"],
   "rangeStrategy": "update-lockfile",
   "prHourlyLimit": 6,
+  "minimumReleaseAge": "3 days",
   "separateMinorPatch": true,
   "platformAutomerge": true,
   "packageRules": [
