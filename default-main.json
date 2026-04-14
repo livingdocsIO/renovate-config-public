@@ -42,7 +42,7 @@
     "labels": ["security"],
     "enabled": true,
     "schedule": ["after 6pm and before 8am every day"],
-    "minimumReleaseAge": 0,
+    "minimumReleaseAge": 1,
     "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
     "prCreation": "immediate"
   }
