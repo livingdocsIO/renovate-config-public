@@ -1,48 +1,71 @@
-
 {
   "extends": [
     "config:base"
   ],
   "dependencyDashboard": true,
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "rebaseWhen": "auto",
   "commitMessageExtra": "from {{{currentVersion}}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}v{{{newMajor}}}{{else}}{{#if isSingleVersion}}v{{{newVersion}}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}",
   "prConcurrentLimit": 6,
-  "schedule": ["after 10pm and before 4am every day"],
+  "schedule": [
+    "after 10pm and before 4am every day"
+  ],
   "timezone": "CET",
-  "enabledManagers": ["npm"],
+  "enabledManagers": [
+    "npm"
+  ],
   "rangeStrategy": "update-lockfile",
   "prHourlyLimit": 6,
   "separateMinorPatch": true,
   "platformAutomerge": true,
-  "minimumReleaseAge": 3,
+  "minimumReleaseAge": "4 days",
   "packageRules": [
     {
-      "matchPackagePatterns": ["babel"],
+      "matchPackagePatterns": [
+        "babel"
+      ],
       "groupName": "babel"
     },
     {
-      "matchPackagePatterns": ["eslint"],
+      "matchPackagePatterns": [
+        "eslint"
+      ],
       "groupName": "eslint"
     },
     {
-      "matchBaseBranches": ["main"],
-      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true,
       "automergeType": "pr"
     },
     {
-      "matchBaseBranches": ["main"],
-      "matchDepTypes": ["devDependencies"],
+      "matchBaseBranches": [
+        "main"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "automerge": true,
       "automergeType": "pr"
     }
   ],
   "vulnerabilityAlerts": {
-    "labels": ["security"],
+    "labels": [
+      "security"
+    ],
     "enabled": true,
-    "schedule": ["after 6pm and before 8am every day"],
-    "minimumReleaseAge": 1,
+    "schedule": [
+      "after 6pm and before 8am every day"
+    ],
+    "minimumReleaseAge": null,
     "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
     "prCreation": "immediate"
   }
