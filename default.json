@@ -64,6 +64,7 @@
       "security"
     ],
     "enabled": true,
+    "semanticCommitType": "fix",
     "schedule": [
       "after 6pm and before 8am every day"
     ],
